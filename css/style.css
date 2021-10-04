@@ -1,0 +1,17 @@
+@font-face{
+ 	font-family: "Cormorant";
+  	src: url("../fonts/Cormorant/Cormorant-Bold.ttf") format("truetype"),
+  	     url("../fonts/Cormorant/Cormorant-BoldItalic.ttf") format("truetype");
+}
+
+@font-face{
+ 	font-family: "Jost";
+  	src: url("../fonts/Jost/static/Jost-regular.ttf") format("truetype"),
+  	     url("../fonts/Jost/static/Jost-Medium.ttf") format("truetype");
+}
+
+
+body{
+	font-family: "Jost";
+}
+
