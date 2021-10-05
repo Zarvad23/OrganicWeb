@@ -18,6 +18,7 @@ body{
 .title{
 	font-family: 'Cormorant', serif;
 	font-size: 5rem;
+	line-height: 5rem;
 	span{
 		font-style: italic;
 	}
@@ -45,10 +46,14 @@ body{
 }
 
 .section-main{
-	background-image: url(../img/bg-1.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	background: 
+		url(../img/avocado.png) no-repeat right -24px top  47px/ 191px 189px,
+		url(../img/beans.png) no-repeat left -8px bottom / 118px 136px,
+		url(../img/cucumber.png) no-repeat left 681px top/ 85px 43px,
+		url(../img/pepper.png) no-repeat left 28px top  399px/ 86px 72px,
+		url(../img/tomato.png) no-repeat right 112px bottom/ 110px 119px,
+		url(../img/bg-1.png) no-repeat center / cover;
+
 }
 
 .main{
@@ -59,9 +64,78 @@ body{
 		flex: 0 0 40%;
 		&__description{
 			font-size: 1.12rem;
-			line-height: 1.51;
+			line-height: 1.7rem;
 			margin-top: 60px;
 			margin-bottom: 77px;
+		}
+	}
+	&-visual{
+		border: 1px solid rgba($gray, $alpha);
+		border-radius: 100%;
+		padding: 53px;
+		position: relative;
+		&__image{
+			border: 1px solid rgba($gray, $alpha);
+			border-radius: 100%;
+			padding: 21px;
+			img{
+				border-radius: 100%;
+				box-shadow: 15px 48px 42px 0px rgba($gray, $alpha);
+			}
+		}
+		&__btn{
+			background-color: transparent;
+			border: none;
+			color: rgba($gray, 0.8);
+			text-align: left;
+			position: absolute;
+			line-height: 1.5rem;
+			span{
+				color: rgba($gray, 1);
+				display: block;
+			}
+			&::before{
+				content: "";
+				position: absolute;
+				border-radius: 100%;
+				display: block;
+				position: absolute;
+				width: 11px;
+				height: 11px;
+				background-color: $gray;
+				box-shadow: 0 0 0 4px #fff, 0 0 0 5px $gray;
+			}
+			&:focus{
+				outline: none;
+				&::before{
+					background-color: $orange;
+					box-shadow: 0 0 0 4px #fff, 0 0 0 5px $orange;	
+				}
+			}
+		}
+		&__01{
+			top: 45px;
+			left: 58px;
+			&::before{
+				top: 22px;
+				left: 91px;
+			}
+		}
+		&__02{
+			top: 191px;
+    		right: -4px;
+			&::before{
+				top: 21px;
+    			left: -20px;
+			}
+		}
+		&__03{
+			bottom: -53px;
+    		right: 237px;
+			&::before{
+				top: -20px;
+    			left: 19px;
+			}
 		}
 	}
 }
