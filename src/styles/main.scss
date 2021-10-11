@@ -687,7 +687,13 @@ body{
 		background-repeat: no-repeat;
 		background-position: center center;
 		text-decoration: none;
-		text-indent: -9999px
+		text-indent: -9999px;
+		opacity: 0.4;
+		transition: opacity 0.3s ease;
+		&:hover{
+			opacity: 1;
+		}
+		
 	}
 
 	&__mastercard{
