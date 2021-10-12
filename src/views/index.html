@@ -486,7 +486,35 @@
             </div>
         </div>
     </section>
-    @@include("../blocks/modules/footer/footer.html")
+    <section class="section-form">
+        <div class="wrapper">
+            <div class="box-form">
+                <div class="box-form-item">
+                    <h2 class="title">Не смогли<br><span>определиться?</span></h2>
+                    <div class="ml">
+                        <p class="box-form__text">Если у вас остались вопросы, вы можете задать отправить нам ваши данные. Наши менеджеры 
+                            свяжутся с вами в течении рабочего дня.</p>
+                            <ul class="box-form-list">
+                                <li class="box-form-list__item box-form-list__tel"><a class="box-form-list__link" href="tel:+79453425555">+7 945 342 55 55</a></li>
+                                <li class="box-form-list__item box-form-list__email"><a class="box-form-list__link" href="email:healthlyfood@mail.ru">healthlyfood@mail.ru</a></li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="box-form-item">
+                    <form class="form" action="/" method="POST">
+                      <h3 class="form__title">Свяжитесь с нами</h3>  
+                      <label class="form__label" for="name">Ваше имя</label>
+                      <input class="form__input" type="text" name="name" id="name" placeholder="Ваше имя"required>
+                      <label class="form__label" for="sername">Ваш телефон</label>
+                      <input class="form__input" type="text" name="sername" id="sername" placeholder="Ваш телефон" required>
+                      <button class="btn" type="submit">Заказать звонок</button>
+                      <p class="form-text">Нажимая на кнопку вы подтверждаете свое согласие на обработку <a class="form-text__link" href="#">персональных данных.</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        @@include("../blocks/modules/footer/footer.html")
+    </section>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>

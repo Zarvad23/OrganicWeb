@@ -600,7 +600,7 @@ body{
 
 .section-delivery{
 	background: url(../img/bg-6.png) no-repeat center / cover;
-	padding-bottom: 140px;
+	padding-bottom: 218px;
 	.title{
 		margin-bottom: 4.625rem;
 	}
@@ -706,5 +706,129 @@ body{
 
 	&__paypal{
 		background-image: url(../img/paypal.svg);
+	}
+}
+
+.section-form{
+	background: url(../img/bg-6.png) no-repeat center / cover;
+	padding-bottom: 160px;
+}
+
+.box-form{
+ 	display: flex;
+ 	justify-content: space-between;
+	padding-bottom: 10.625rem;
+	&__text{
+		font-size: 1.125rem;
+		line-height: 1.687rem;
+		margin: 0;
+		margin-bottom: 62px;
+	}
+}
+
+.box-form-item{
+	&:first-child{
+		flex: 0 0 39%;
+		padding-top: 27px;
+	}
+	&:last-child{
+		flex: 0 0 41%;
+	}
+	.title{
+		margin-bottom: 63px;
+	}
+}
+
+.box-form-list{
+	list-style: none;	
+	&__item{
+		position: relative;
+		margin-bottom: 20px;
+		&::before{
+			content: '';
+			position: absolute;
+			display: block;
+			width: 29px;
+			height: 25px;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__tel{
+		&::before{
+			background-image: url(../img/phone.svg);
+		}
+	}
+	&__email{
+		&::before{
+			background-image: url(../img/mail.svg);
+		}
+	}
+	&__link{
+		color: $gray;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 1.5rem;
+		padding-left:58px;
+	}
+}
+
+.form{
+	padding: 33px 59px;
+	padding-bottom: 27px;
+	display: flex;
+	flex-direction: column;
+	border: 2px solid rgba($gray, $alpha);
+	border-radius: 20px;
+	&__title{
+		font-size: 1.875rem;
+		font-weight: 700;
+		font-family: 'Cormorant', serif;
+		margin-bottom: 30px;
+	}
+	&__label{
+		font-size: 0.75rem;
+		margin-left: 6px;
+		margin-bottom: 10px;
+	}
+	&__input{
+		box-sizing: border-box;
+		padding: 23px 0;
+		padding-left: 14px;
+		border-radius: 20px;
+		border: 1px solid rgba($gray, $alpha);
+		margin-bottom: 29px;
+		font-size: 0.75rem;
+		transition: all 0.1s linear;
+		&:last-of-type{
+			margin-bottom: 40px;
+		}
+		&:focus{
+			padding-left: 33px;
+			font-size: 1rem;
+			border-color: rgba($gray, 1);
+		}
+	}
+
+	.btn{
+		width: 16.25rem;
+		border: none;
+		padding-top: 23px;
+		padding-bottom: 23px;
+		margin-bottom: 5px;
+	}
+	&-text{
+		font-size: 0.75rem;
+		line-height: 1.125rem;
+		opacity: 0.6;
+		&__link{
+			color: $gray;
+			display: block;
+			text-decoration: underline solid rgba($gray, $alpha);
+		}
 	}
 }
