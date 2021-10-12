@@ -35,6 +35,7 @@ body{
 	box-shadow: 0 10px 11.18px 1.82px rgba(207,92,13,0.2);
 	color: $white;
 	transition: background-color 0.3s ease;
+	border: none;
 	&:hover{
 		background-color: $orangeHover;
 	}
@@ -49,6 +50,9 @@ body{
 	margin: 0 auto;
 	padding-left: 15px;
 	padding-right: 15px;
+	@media (max-width: 1350px){
+		max-width: 1140px;
+	}
 }
 
 .section-main{
@@ -59,8 +63,15 @@ body{
 		url(../img/pepper.png) no-repeat left 29px top  398px/ 86px 72px,
 		url(../img/tomato.png) no-repeat right 111px bottom 14%/ 110px 119px,
 		url(../img/bg-1.png) no-repeat center / cover;
-	padding-bottom: 208px
-
+	padding-bottom: 208px;
+	@media (max-width: 1700px) {
+		background: 
+		url(../img/avocado.png) no-repeat right -65px top  100px/ 130px 128px,
+		url(../img/cucumber.png) no-repeat left 37.5% top/ 85px 43px,
+		url(../img/pepper.png) no-repeat left -1px top  53%/ 86px 72px,
+		url(../img/tomato.png) no-repeat right 10px bottom 14%/ 110px 119px,
+		url(../img/bg-1.png) no-repeat center / cover;
+	}
 }
 
 .main{
@@ -69,6 +80,9 @@ body{
 	align-items: center;
 	&-text{
 		flex: 0 0 40%;
+		@media (max-width: 1350px) {
+			flex: 0 0 45%;
+		}
 		&__description{
 			font-size: 1.12rem;
 			line-height: 1.7rem;
@@ -88,6 +102,9 @@ body{
 			img{
 				border-radius: 100%;
 				box-shadow: 15px 48px 42px 0px rgba($gray, $alpha);
+				@media (max-width: 1350px) {
+					width: 427px;
+				}
 			}
 		}
 		&__btn{
@@ -124,6 +141,10 @@ body{
 		&__01{
 			top: 45px;
 			left: 58px;
+			@media (max-width: 1350px) {
+				top: 27px;
+    			left: 25px;
+			}
 			&::before{
 				top: 22px;
 				left: 91px;
@@ -132,6 +153,11 @@ body{
 		&__02{
 			top: 191px;
     		right: -4px;
+    		    
+   		@media (max-width: 1350px) {
+				top: 145px;
+   	 		right: -15px;
+			}
 			&::before{
 				top: 21px;
     			left: -20px;
@@ -140,6 +166,10 @@ body{
 		&__03{
 			bottom: -53px;
     		right: 237px;
+    		@media (max-width: 1350px) {
+				bottom: -55px;
+    			right: 170px;
+			}
 			&::before{
 				top: -20px;
     			left: 19px;
@@ -210,6 +240,9 @@ body{
 		text-align: left;
 		transition: transform 0.4s ease;
 		transform: translateY(15.5rem);
+		@media (max-width: 1350px) {
+			transform: translateY(19.5rem);
+		}
 		&__title{
 			font-size: 1.875rem;
 			font-family: "Cormorant", serif;
@@ -312,7 +345,10 @@ body{
 		line-height: 1.5; 
 	}
 	&-item{
-		flex: 0 0 49%
+		flex: 0 0 49%;
+		@media (max-width: 1350px) {
+			flex: 0 0 50%
+		}
 	}
 }
 
@@ -331,6 +367,9 @@ body{
 		font-size: 1.875rem;
 		margin-left: 85px;
 		text-align: center;
+		@media (max-width: 1350px) {
+			margin-left: 55px;
+		}
 		&::before{
 			content: "";
 			margin: 0 auto 0.9rem;
@@ -375,9 +414,12 @@ body{
 	padding-bottom: 189px;
 	.slider{
 		&-item{
-			height: 685px;
+			min-height: 685px;
 			justify-content: flex-start;
 			transition: box-shadow 0.3s ease;
+			@media (max-width: 1350px) {
+				min-height: 718px;
+			}
 			&::before{
 				display: none;
 			}
@@ -393,15 +435,21 @@ body{
 			margin-bottom: 2rem;
 		}
 		&-text{
-			flex-grow: 1;
 			transform: none;
+			display: flex;
+			flex-direction: column;
 			max-width: 80%;
+			flex-grow: 1;
+			@media (max-width: 1350px) {
+				max-width: 100%;
+			}
 			&__title{
 				margin-bottom: 1.5rem;
 			}
 			&__desc{
 				margin-bottom: 20px;
 				font-size: 1.125rem;
+				flex-grow: 1;
 			}
 		}
 		&-price{
@@ -430,6 +478,10 @@ body{
 					background-position: center center; 
 					cursor: pointer;
 					transition: opacity 0.3s ease;
+					@media (min-width: 1350px) {
+						width: 2.5rem;
+						height: 2.5rem;
+					}
 					&:hover{
 						opacity: 1;
 					}
@@ -450,6 +502,9 @@ body{
 				.btn{
 					width: 10px;
 					padding: 1.3rem 3.25rem;
+					@media (min-width: 1350px) {
+						padding: 1rem 1.5rem;
+					}
 				}
 			}
 		}
@@ -481,6 +536,9 @@ body{
 		text-align: center;
 		margin-right: 20px;
 		margin-bottom: 20px;
+		@media (max-width: 1350px) {
+			flex-basis: 208px;
+		}
 	}
 	&-link{
 		display: block;
@@ -499,10 +557,8 @@ body{
 }
 
 .catalog{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
 	&-item{
 		border: 1px solid rgba($gray, $alpha);
 		border-radius: 20px;
@@ -600,13 +656,14 @@ body{
 
 .section-delivery{
 	background: url(../img/bg-6.png) no-repeat center / cover;
-	padding-bottom: 218px;
+	padding-bottom: 203px;
 	.title{
 		margin-bottom: 4.625rem;
 	}
 }
 
 .catalog-load-btn{
+	grid-column: 1 / -1;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -711,7 +768,6 @@ body{
 
 .section-form{
 	background: url(../img/bg-6.png) no-repeat center / cover;
-	padding-bottom: 160px;
 }
 
 .box-form{
@@ -722,20 +778,20 @@ body{
 		font-size: 1.125rem;
 		line-height: 1.687rem;
 		margin: 0;
-		margin-bottom: 62px;
+		margin-bottom: 3.875rem;
 	}
 }
 
 .box-form-item{
 	&:first-child{
 		flex: 0 0 39%;
-		padding-top: 27px;
+		padding-top: 1.687rem;
 	}
 	&:last-child{
 		flex: 0 0 41%;
 	}
 	.title{
-		margin-bottom: 63px;
+		margin-bottom: 3.937rem;
 	}
 }
 
@@ -743,7 +799,7 @@ body{
 	list-style: none;	
 	&__item{
 		position: relative;
-		margin-bottom: 20px;
+		margin-bottom: 1.25rem;
 		&::before{
 			content: '';
 			position: absolute;
@@ -773,13 +829,13 @@ body{
 		text-decoration: none;
 		font-weight: 500;
 		font-size: 1.5rem;
-		padding-left:58px;
+		padding-left:3.625rem;
 	}
 }
 
 .form{
-	padding: 33px 59px;
-	padding-bottom: 27px;
+	padding: 2.062rem 3.687rem;
+	padding-bottom: 1.687rem;
 	display: flex;
 	flex-direction: column;
 	border: 2px solid rgba($gray, $alpha);
@@ -788,27 +844,28 @@ body{
 		font-size: 1.875rem;
 		font-weight: 700;
 		font-family: 'Cormorant', serif;
-		margin-bottom: 30px;
+		margin-bottom: 1.875rem;
 	}
 	&__label{
 		font-size: 0.75rem;
-		margin-left: 6px;
-		margin-bottom: 10px;
+		margin-left: 0.375rem;
+		margin-bottom: 0.625rem;
 	}
 	&__input{
 		box-sizing: border-box;
-		padding: 23px 0;
-		padding-left: 14px;
+		padding: 1.437rem 0;
+		padding-left: 0.875rem;
 		border-radius: 20px;
 		border: 1px solid rgba($gray, $alpha);
-		margin-bottom: 29px;
+		margin-bottom: 1.812rem;
 		font-size: 0.75rem;
 		transition: all 0.1s linear;
+		outline: none;
 		&:last-of-type{
-			margin-bottom: 40px;
+			margin-bottom: 2.5rem;
 		}
 		&:focus{
-			padding-left: 33px;
+			padding-left: 2.062rem;
 			font-size: 1rem;
 			border-color: rgba($gray, 1);
 		}
@@ -817,9 +874,8 @@ body{
 	.btn{
 		width: 16.25rem;
 		border: none;
-		padding-top: 23px;
-		padding-bottom: 23px;
-		margin-bottom: 5px;
+		padding: 1.437rem 0;
+		margin-bottom: 0.312rem;
 	}
 	&-text{
 		font-size: 0.75rem;
@@ -832,3 +888,4 @@ body{
 		}
 	}
 }
+
