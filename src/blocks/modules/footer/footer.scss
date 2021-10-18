@@ -1,0 +1,111 @@
+.footer{
+    border-top: 1px solid $gray;
+    padding: 76px 0;
+    .logo{
+      width: 179px;
+      height: 48px;
+      margin-top: 10px;
+    }
+}
+
+.box-footer{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.box-footer-item{
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 66.4%;
+}
+
+.box-footer-info{
+  &:first-of-type{
+    margin-left: 0;
+  }
+  &:not(:last-of-type){
+    padding-top: 3px;
+  }
+}
+
+.box-footer-list{
+    font-size: 1.12rem;
+    list-style: none;
+    &__item{
+      margin-bottom: 1.62rem;
+    }
+    &__link{
+      text-decoration: none;
+      color: $gray;
+    }
+}
+
+.box-footer-list__tel{
+  font-size: 1.68rem;
+  margin-bottom: 2.06rem;
+  .box-footer-list__link{
+    transition: all 0.3s ease;
+    &:hover{
+      color: $orange;
+    }
+  }
+}
+
+.box-footer-list__email{
+  padding-left: 3px;
+  .box-footer-list__link{
+  transition: all 0.3s ease;
+  &:hover{
+    color: $orange;
+  }
+  }
+}
+
+.box-footer-social{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__link{
+    width: 48px;
+    height: 48px;
+    border: 2px solid rgba($gray, 0.8);
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    &:hover{
+      opacity: 1;
+    }
+  }
+  &__vk{
+    background-image: url(../img/vk.svg);
+    background-size: 23px;
+  }
+  &__inst{
+    background-image: url(../img/instagram.svg);
+    background-size: 18px;
+  }
+  &__fb{
+    background-image: url(../img/facebook.svg);
+    background-size: 18px;
+  }
+}
+.box-copyright{
+  display: flex;
+  justify-content: space-between;
+  &-text{
+    color: rgba($gray, 0.6);
+    &__link{
+      color: rgba($gray, 0.6);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      &:hover{
+        color: $gray;
+      }
+    }
+  }
+}
